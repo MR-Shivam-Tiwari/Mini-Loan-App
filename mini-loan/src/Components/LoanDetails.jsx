@@ -14,7 +14,7 @@ function LoanDetails() {
   const fetchScheduledRepayments = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/${loanId}/repayments`
+        `https://mini-loan-backend.vercel.app/api/${loanId}/repayments`
       );
       setScheduledRepayments(response.data);
     } catch (error) {
@@ -33,7 +33,7 @@ function LoanDetails() {
   const handleSubmitRepayment = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/${loanId}/repayments/${selectedPaymentId}/pay`,
+        `https://mini-loan-backend.vercel.app/api/${loanId}/repayments/${selectedPaymentId}/pay`,
         { repaymentAmount }
       );
       // Update the state with the updated repayment information

@@ -17,7 +17,7 @@ function LoanApplication() {
       const userEmail = localStorage.getItem("email");
 
       // Send loan submission request with email
-      const response = await axios.post("http://localhost:5000/api/submit", {
+      const response = await axios.post("https://mini-loan-backend.vercel.app/api/submit", {
         loanAmount,
         loanTerm,
         startDate,
@@ -35,7 +35,7 @@ function LoanApplication() {
   const fetchLoans = async () => {
     try {
       const userEmail = localStorage.getItem('email'); // Retrieve email from localStorage
-      const response = await axios.get(`http://localhost:5000/api/getloan?email=${userEmail}`);
+      const response = await axios.get(`https://mini-loan-backend.vercel.app/api/getloan?email=${userEmail}`);
       setLoans(response.data);
     } catch (error) {
       console.error("Error fetching loans:", error);

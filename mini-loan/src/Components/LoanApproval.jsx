@@ -15,7 +15,7 @@ function LoanApproval() {
   useEffect(() => {
     const fetchLoans = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/checkloan");
+        const response = await axios.get("https://mini-loan-backend.vercel.app/api/checkloan");
         setLoans(response.data);
       } catch (error) {
         console.error("Error fetching loans:", error);
@@ -28,7 +28,7 @@ function LoanApproval() {
     try {
       setIsLoading(true);
       const response = await axios.put(
-        `http://localhost:5000/api/${loanId}/approve`
+        `https://mini-loan-backend.vercel.app/api/${loanId}/approve`
       );
       console.log(response.data); // Handle success response
       // Update the UI to indicate approval
