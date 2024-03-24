@@ -6,8 +6,8 @@ Follow these steps to set up and run your eCommerce project:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/MR-Shivam-Tiwari/Commerce-Elite.git
-   cd Frontend && cd Backend
+   git clone https://github.com/MR-Shivam-Tiwari/Mini-Loan-App.git
+   cd mini-loan && cd Backend
     npm install
      npm start
 
